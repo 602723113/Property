@@ -1,0 +1,7 @@
+name: Property
+main: cc.zoyn.property.PropertyPlugin
+version: 1.0
+author: Zoyn
+commands:
+  property:
+    aliases: [sx, shuxing, att, attribute, pp]

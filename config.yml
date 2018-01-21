@@ -1,0 +1,23 @@
+option:
+  # 固定值设置
+  default:
+    physical-attack: 6.0
+    physical-defense: 6.0
+    fire-attack: 6.0
+    fire-defense: 6.0
+    wood-attack: 6.0
+    wood-defense: 6.0
+    water-attack: 6.0
+    water-defense: 6.0
+    light-attack: 6.0
+    light-defense: 6.0
+    dark-attack: 6.0
+    dark-defense: 6.0
+    health: 0.0
+    health-scala: 0.0
+    suck-blood: 2.5
+    real-attack: 0.0
+    dodge: 20.0
+    hit: 15.0
+    exp-plus: 0.0
+    movement-speed: 0.0
