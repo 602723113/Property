@@ -12,6 +12,11 @@ import java.util.Map;
 public class PropertyCache {
 
     private static Map<String, Property> propertyMap = Maps.newHashMap();
+    private static final Property property = new Property();
+
+    public static Property getDefaultProperty() {
+        return property;
+    }
 
     public static Map<String, Property> getPropertyMap() {
         return propertyMap;

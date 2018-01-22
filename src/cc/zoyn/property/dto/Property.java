@@ -33,8 +33,34 @@ public class Property {
     private double expPlus = PropertyPlugin.getInstance().getConfig().getDouble("option.default. exp-plus");
     private double movementSpeed = PropertyPlugin.getInstance().getConfig().getDouble("option.default.movement-speed");
 
+    public Property() {
+    }
+
     public Property(String playerName) {
-        this.name = playerName;
+        if (playerName == null) {
+            physicalAttack = 0;
+            physicalDefense = 0;
+            fireAttack = 0;
+            fireDefense = 0;
+            woodAttack = 0;
+            woodDefense = 0;
+            waterAttack = 0;
+            waterDefense = 0;
+            lightAttack = 0;
+            lightDefense = 0;
+            darkAttack = 0;
+            darkDefense = 0;
+            health = 0;
+            healthScala = 0;
+            suckBlood = 0;
+            realAttack = 0;
+            dodge = 0;
+            hit = 0;
+            expPlus = 0;
+            movementSpeed = 0;
+        } else {
+            this.name = playerName;
+        }
     }
 
     public String getName() {
