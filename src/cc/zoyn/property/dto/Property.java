@@ -237,9 +237,9 @@ public class Property {
                 "    §7火系防御: §f" + fireDefense + "  §7木系攻击: §f" + woodAttack + "  §7木系防御: §f" + woodDefense + "\n" +
                 "    §7水系攻击: §f" + waterAttack + "  §7水系防御: §f" + waterDefense + "  §7光系攻击: §f" + lightAttack + "\n" +
                 "    §7光系防御: §f" + lightDefense + "  §7暗系攻击: §f" + darkAttack + "  §7暗系防御: §f" + darkDefense + "\n" +
-                "    §7血量: §f" + health + "  §7血量恢复: §f" + healthScala + "  §7吸血: §f" + suckBlood + "\n" +
-                "    §7真实伤害: §f" + realAttack + "  §7闪避几率: §f" + dodge + "%" + "  §7命中几率: §f" + hit + "%" + "\n" +
-                "    §7经验加成: §f" + expPlus + "%" + "  §7移动速度: §f" + movementSpeed + "%"
+                "    §7血量恢复: §f" + healthScala + "  §7吸血: §f" + suckBlood + "  §7移动速度: §f" + movementSpeed + "%\n" +
+                "    §7真实伤害: §f" + realAttack + "  §7闪避几率: §f" + dodge + "%" + "  §7命中几率: §f" + hit + "%\n" +
+                "    §7经验加成: §f" + expPlus + "%"
                 ;
     }
 }
