@@ -52,11 +52,8 @@ public final class CommonUtils {
      */
     public static List<Player> getOnlinePlayers() {
         List<Player> playerList = Lists.newArrayList();
-
         for (World world : Bukkit.getWorlds()) {
-            if (!world.getPlayers().isEmpty()) {
-                playerList.addAll(world.getPlayers());
-            }
+            playerList.addAll(world.getPlayers());
         }
         return playerList;
     }
@@ -83,10 +80,10 @@ public final class CommonUtils {
         if (itemStack != null && itemStack.hasItemMeta() && itemStack.getItemMeta().hasLore()) {
             List<String> lore = itemStack.getItemMeta().getLore();
             for (String aLore : lore) {
-                if (aLore.contains("血量")) {
-                    property.setHealth(property.getHealth() + Double.valueOf(ChatColor.stripColor(aLore.split(":")[1]).replaceAll("%", "")));
-                } else if (aLore.contains("血量恢复")) {
+                if (aLore.contains("血量恢复")) {
                     property.setHealthScala(property.getHealthScala() + Double.valueOf(ChatColor.stripColor(aLore.split(":")[1])));
+                } else if (aLore.contains("血量")) {
+                    property.setHealth(property.getHealth() + Double.valueOf(ChatColor.stripColor(aLore.split(":")[1]).replaceAll("%", "")));
                 } else if (aLore.contains("物理攻击")) {
                     property.setPhysicalAttack(property.getPhysicalAttack() + Double.valueOf(ChatColor.stripColor(aLore.split(":")[1])));
                 } else if (aLore.contains("物理防御")) {
@@ -121,8 +118,6 @@ public final class CommonUtils {
                     property.setHit(property.getHit() + Double.valueOf(ChatColor.stripColor(aLore.split(":")[1]).replaceAll("%", "")));
                 } else if (aLore.contains("经验加成")) {
                     property.setExpPlus(property.getExpPlus() + Double.valueOf(ChatColor.stripColor(aLore.split(":")[1]).replaceAll("%", "")));
-                } else if (aLore.contains("移动速度")) {
-                    property.setMovementSpeed(property.getMovementSpeed() + Double.valueOf(ChatColor.stripColor(aLore.split(":")[1]).replaceAll("%", "")));
                 }
             }
         }
@@ -173,7 +168,6 @@ public final class CommonUtils {
             property.setDodge(property.getDodge() + propertyTemp.getDodge());
             property.setHit(property.getHit() + propertyTemp.getHit());
             property.setExpPlus(property.getExpPlus() + propertyTemp.getExpPlus());
-            property.setMovementSpeed(property.getMovementSpeed() + propertyTemp.getMovementSpeed());
         }
         return property;
     }

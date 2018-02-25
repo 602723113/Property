@@ -3,6 +3,7 @@ package cc.zoyn.property;
 import cc.zoyn.property.command.CommandHandler;
 import cc.zoyn.property.listener.AttackListener;
 import cc.zoyn.property.listener.ExperienceListener;
+import cc.zoyn.property.listener.HealthRecoverListener;
 import cc.zoyn.property.runnable.PropertyActionRunnable;
 import cc.zoyn.property.runnable.SyncDataRunnable;
 import org.bukkit.Bukkit;
@@ -30,6 +31,7 @@ public class PropertyPlugin extends JavaPlugin {
         // 事件注册
         Bukkit.getPluginManager().registerEvents(new AttackListener(), this);
         Bukkit.getPluginManager().registerEvents(new ExperienceListener(), this);
+        Bukkit.getPluginManager().registerEvents(new HealthRecoverListener(), this);
 
         SyncDataRunnable syncDataRunnable = new SyncDataRunnable();
         PropertyActionRunnable propertyActionRunnable = new PropertyActionRunnable();

@@ -70,21 +70,28 @@ public class AttackListener implements Listener {
                 if (targetProperty.getLightDefense() - property.getLightAttack() < 0) {
                     damage += property.getLightAttack() - targetProperty.getLightDefense();
                 }
-
+            } else {
                 /* 吸血 */
                 double health = player.getHealth();
                 double maxHealth = player.getMaxHealth();
                 if (maxHealth != health) {
-                    if (health + property.getSuckBlood() < maxHealth) {
+                    if ((health + property.getSuckBlood()) < maxHealth) {
                         player.setHealth(health + property.getSuckBlood());
                     } else { // 当吸血后的血量大于最大血量时则设定为最大血量
                         player.setHealth(maxHealth);
                     }
                 }
 
+                /* 属性攻击 */
+                damage += property.getFireAttack();
+                damage += property.getWoodAttack();
+                damage += property.getWaterAttack();
+                damage += property.getDarkAttack();
+                damage += property.getLightAttack();
+
                 /* 真实伤害 */
                 damage += property.getRealAttack() <= 0 ? 0 : property.getRealAttack();
-            } else {
+
                 damage += property.getPhysicalAttack();
             }
 //            System.out.println("damage" + damage);
